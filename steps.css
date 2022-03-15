@@ -9,7 +9,8 @@ ol.lst-stps>li, ol.lst-stps-sub>li, .lst-stps .lst-stps-itm {
 	list-style-type: none;
 	margin-top: 30px;
 	position: relative;
-	padding-left: 60px;
+	/*padding-left: 60px;*/
+	padding-left: 3em;
 	padding-right: 15px;
 	min-height: 2.2em;
 }
@@ -32,7 +33,7 @@ ol.lst-stps li:before, .lst-stps .lst-stps-itm:before {
 	border: 3px solid #26374a;
 	background-color: #fff;
 	float: left;
-	position: absolute;
+	/*position: absolute;*/
 	box-sizing: content-box;
 	line-height: 2.2;
 	text-align: center;
@@ -67,11 +68,12 @@ ol.lst-stps li>:first-child, .lst-stps .lst-stps-itm>:first-child {
 	margin-top: auto;
 }
 ol.lst-stps.stps-strpd>li, ol.lst-stps.stps-strpd li ol.lst-stps-sub.stps-strpd>li, .lst-stps.stps-strpd .lst-stps-itm {
-	padding-left: 75px;
+	/*padding-left: 75px;*/
+	padding-left: 85px;
 }
-ol.lst-stps.stps-strpd>li:before, ol.lst-stps-sub.stps-strpd>li:before, .lst-stps.stps-strpd>.lst-stps-itm:before, .lst-stps-sub.stps-strpd>.lst-stps-itm:before {
+/*ol.lst-stps.stps-strpd>li:before, ol.lst-stps-sub.stps-strpd>li:before, .lst-stps.stps-strpd>.lst-stps-itm:before, .lst-stps-sub.stps-strpd>.lst-stps-itm:before {
 	margin-left: 15px;
-}
+}*/
 
 @media all and (max-width: 767px) {
 ol.lst-stps li:before, .lst-stps .lst-stps-itm:before {
