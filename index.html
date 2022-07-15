@@ -6,7 +6,10 @@ lang: en
 css:
 - steps.css
 ---
-<p>Style ordered list and divs with steps number in circles</p>
+<p>Style ordered list and divs with steps number in circles (or lead zero design)</p>
+
+<h2>Governance</h2>
+<p><strong>Preliminary governance (need to consult with TBS/PP):</strong> circle design used more for navigation purposes (e.g. sequential topic pages, link followed by doormat text).  Lead zero design can only be used for in page step navigation.</p>
 
 <h2>GCWeb implementation plan</h2>
 
@@ -30,6 +33,7 @@ css:
 		 <h2>Classes used</h2>
 		 <ul class="colcount-sm-2 colcount-md-4">
 			<li><code>lst-stps</code></li>
+			 <li><code>ld-zr</code></li>
 			<li><code>stps-strpd</code></li>
 			<li><code>lst-stps-itm</code></li>
 			<li><code>lst-stps-sub</code></li>
@@ -80,6 +84,53 @@ css:
       </details>
     </div>
   </div>
+  <h2>Steps as an single-level <code>&lt;ol&gt;</code> with lead zero <span class="label label-info">New</span></h2>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Default design</h3>
+      <span class="wb-prettify all-pre"></span>
+      <ol class="lst-stps ld-zr">
+        <li>Lorem ipsum dolor sit amet, esse autem per ex, nec in magna lorem. Ea nec error scriptorem referrentur, patrioque torquatos conclusionemque pri in. Sed sint debitis ad, mazim vitae temporibus qui ut, vel erat ponderum efficiendi ei. In idque euismod sed.</li>
+        <li>List item 2</li>
+        <li>
+          <p>List item 3</p>
+          <p>Second paragraph</p>
+        </li>
+        <li>List item 4</li>
+      </ol>
+      <details>
+        <summary>View code</summary>
+        <pre><code>&lt;ol class="lst-stps ld-zr"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </details>
+    </div>
+    <div class="col-md-6">
+      <h3>With zebra striping</h3>
+      <ol class="lst-stps ld-zr stps-strpd">
+        <li>Lorem ipsum dolor sit amet, esse autem per ex, nec in magna lorem. Ea nec error scriptorem referrentur, patrioque torquatos conclusionemque pri in. Sed sint debitis ad, mazim vitae temporibus qui ut, vel erat ponderum efficiendi ei. In idque euismod sed.</li>
+        <li>List item 2</li>
+        <li>
+          <p>List item 3</p>
+          <p>Second paragraph</p>
+        </li>
+        <li>List item 4</li>
+      </ol>
+      <details>
+        <summary>View code</summary>
+        <pre><code>&lt;ol class="lst-stps ld-zr stps-strpd"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </details>
+    </div>
+  </div>
+
   <h2>Steps as an <code>&lt;ol&gt;</code> with sub-steps (nested <code>&lt;ol&gt;</code>)</h2>
   <div class="row">
     <div class="col-md-4">
@@ -218,6 +269,145 @@ css:
       </details>
     </div>
   </div>
+ <h2>Steps as an <code>&lt;ol&gt;</code> with sub-steps (nested <code>&lt;ol&gt;</code>) and lead zero <span class="label label-info">New</span></h2>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Default design</h3>
+      <ol class="lst-stps ld-zr">
+        <li> Lorem ipsum dolor sit amet, esse autem per ex, nec in magna lorem. Ea nec error scriptorem referrentur, patrioque torquatos conclusionemque pri in. Sed sint debitis ad, mazim vitae temporibus qui ut, vel erat ponderum efficiendi ei. In idque euismod sed.
+          <ol class="lst-stps-sub">
+            <li>List item 1 sub item 1</li>
+            <li>List item 1 sub item 2</li>
+            <li>List item 1 sub item 3</li>
+          </ol>
+        </li>
+        <li>List item 2</li>
+        <li>
+          <p>List item 3</p>
+          <p>Second paragraph</p>
+        </li>
+        <li> List item 4
+          <ol class="lst-stps-sub">
+            <li>List item 4 sub item 1</li>
+            <li>List item 4 sub item 2</li>
+            <li>List item 4 sub item 3</li>
+          </ol>
+        </li>
+      </ol>
+      <details>
+        <summary>View code</summary>
+        <pre><code>&lt;ol class="lst-stps ld-zr"&gt;
+  &lt;li&gt;...
+    &lt;ol class="lst-stps-sub"&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...
+    &lt;ol class="lst-stps-sub"&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </details>
+    </div>
+    <div class="col-md-4">
+      <h3>With zebra striping</h3>
+      <ol class="lst-stps ld-zr stps-strpd">
+        <li> Lorem ipsum dolor sit amet, esse autem per ex, nec in magna lorem. Ea nec error scriptorem referrentur, patrioque torquatos conclusionemque pri in. Sed sint debitis ad, mazim vitae temporibus qui ut, vel erat ponderum efficiendi ei. In idque euismod sed.
+          <ol class="lst-stps-sub">
+            <li>List item 1 sub item 1</li>
+            <li>List item 1 sub item 2</li>
+            <li>List item 1 sub item 3</li>
+          </ol>
+        </li>
+        <li>List item 2</li>
+        <li>
+          <p>List item 3</p>
+          <p>Second paragraph</p>
+        </li>
+        <li> List item 4
+          <ol class="lst-stps-sub">
+            <li>List item 4 sub item 1</li>
+            <li>List item 4 sub item 2</li>
+            <li>List item 4 sub item 3</li>
+          </ol>
+        </li>
+      </ol>
+      <details>
+        <summary>View code</summary>
+        <pre><code>&lt;ol class="lst-stps ld-zr stps-strpd"&gt;
+  &lt;li&gt;...
+    &lt;ol class="lst-stps-sub"&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...
+    &lt;ol class="lst-stps-sub"&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </details>
+    </div>
+    <div class="col-md-4">
+      <h3>With zebra striping on sub list</h3>
+      <ol class="lst-stps ld-zr stps-strpd">
+        <li> Lorem ipsum dolor sit amet, esse autem per ex, nec in magna lorem. Ea nec error scriptorem referrentur, patrioque torquatos conclusionemque pri in. Sed sint debitis ad, mazim vitae temporibus qui ut, vel erat ponderum efficiendi ei. In idque euismod sed.
+          <ol class="lst-stps-sub stps-strpd">
+            <li>List item 1 sub item 1</li>
+            <li>List item 1 sub item 2</li>
+            <li>List item 1 sub item 3</li>
+          </ol>
+        </li>
+        <li>List item 2</li>
+        <li>
+          <p>List item 3</p>
+          <p>Second paragraph</p>
+        </li>
+        <li> List item 4
+          <ol class="lst-stps-sub stps-strpd">
+            <li>List item 4 sub item 1</li>
+            <li>List item 4 sub item 2</li>
+            <li>List item 4 sub item 3</li>
+          </ol>
+        </li>
+      </ol>
+      <details>
+        <summary>View code</summary>
+        <pre><code>&lt;ol class="lst-stps ld-zr stps-strpd"&gt;
+  &lt;li&gt;...
+    &lt;ol class="lst-stps-sub stps-strpd"&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...
+    &lt;ol class="lst-stps-sub stps-strpd"&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+	 &lt;li&gt;...&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </details>
+    </div>
+  </div>
+
   <h2>Steps as a <code>&lt;div&gt;</code>/<code>&lt;section&gt;</code></h2>
   <div class="row">
     <div class="col-md-6">
