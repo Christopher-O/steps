@@ -34,11 +34,16 @@ implementationPlan:
     what: Review and identify requirement to make this functionality enterprise ready
   - due: 2021-11
     what: Produce accessibility and usability report on its usage on Canada.ca
-  - due: 2022-02
-    what: Have this feature as provisional feature in GCWeb and get TBS to publish guidance on how to use it.
+  - due: 2022-07
+    what: Update with potential divergent in-page list design using a leading zero pattern and minimalized design.  
+  - due: 2022-07
+    what: Update meli-melo implimentation to include new design
+  - due: 2022-10
+    what: Update with potential divergent in-page list design using a leading zero pattern and minimalized design.  
 
 todos:
   - Remove the support for <code>&lt;div&gt;</code>
+  - Will keep code to be used with <code>&lt;div&gt;</code> in order to allow breaks in list pattern throughout the page.  
 
 output: false
 ---
